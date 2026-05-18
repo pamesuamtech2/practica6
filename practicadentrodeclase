@@ -1,0 +1,218 @@
+/*Ejercicio 1: Validador de mayores de edad
+
+let edad = Number(prompt("Ingrese su edad:"));
+
+if (edad >= 18) {
+    alert("Felicidades! Eres mayor de edad");
+}
+else {
+    alert("Aun eres menor de edad!");
+
+} */
+
+//Ejercicio 2: Sistema de aprobado o reprobado
+
+let calificacion = parseFloat(prompt("Ingrese su calificación (0-10):"));
+
+if (calificacion >=5){
+    alert("¡Felicidades! Has aprobado.");
+}
+else if (calificacion < 5){
+    alert("Lo siento, has reprobado. ¡A estudiar más!");
+}
+
+else {
+    alert("Calificación no válida. Por favor ingrese un número entre 0 y 10.");
+}
+
+// Ejercicio 3: Contraseña Secreta
+
+let contraseña = "micontraseña123";
+let ingresoContraseña = prompt("Ingrese la contraseña:");
+if (contraseña === ingresoContraseña){
+    alert("¡Acceso concedido!");
+}
+else {
+    alert("¡Acceso denegado!, intruso");
+}
+
+//Ejercicio 4: Detector de números positivos o negativos
+let numero = parseFloat(prompt("Ingrese un número:"));
+if (numero > 0){
+    alert("El número es positivo.");
+}
+else if (numero < 0){
+    alert("El número es negativo.");
+}
+else {
+    alert("El número es cero.");
+}
+
+//Ejercicio 5: El recordatorio del clima
+
+let pronostico = prompt("¿Está lloviendo hoy? (si/no):") .toLowerCase();
+if (pronostico === "si"){
+    alert ("¡No olvides salir con tu paraguas!")
+}
+else if (pronostico ==== "no"){
+    alert ("¡Disfruta de un gran día soleado!")
+}
+else {
+    alert ("Error, ingrese una respuesta válida")
+}
+
+// Ejercicio 6 : Semafaro Inteligente
+
+let colors = prompt (`
+    Escribe uno de los siguientes colores:
+    1-Rojo
+    2-Verde
+    3-Amarillo
+`).toLowerCase();
+
+if (colors === "rojo")
+    alert ("¡Detente por completo!")
+else if (colors === "amarillo")
+    alert ("¡Precaución, baja la velocidad!")
+else if (colors === "verde")
+    alert ("¡Puedes avanzar!")
+else {
+    alert ("Error, ingrese una respuesta válida")
+}
+
+// Ejercicio 7 : Calculadora de descuentos
+
+let precio = parseFloat(prompt("Ingrese el monto de la compra:"));
+if (precio >= 100){
+    alert ("Tienes un 10% de descuento en tu compra")
+}
+else if (precio >= 50 && precio < 100){
+    alert ("Tienes un 5% de descuento en tu compra")
+}
+else {
+    alert ("No aplicas para ningún descuento esta vez")
+}
+
+// Ejercicio 8 : Calificador de etapas de vida
+
+let edad = parseInt(prompt("Ingrese su edad:"));
+ if (edad < 12) {
+    alert ("Eres un niño");
+ }
+
+ else if (edad >= 12 && edad < 18) {
+    alert ("Eres un adolescente");
+ }
+else {
+    alert ("Eres un adulto");
+}
+ 
+// Ejercicio 9 : Sistema de calificaciones americanas
+
+let calificacion = parseFloat(prompt("Ingrese su calificación (0-10):"));
+if (calificacion >=9){
+    alert ("A, Excelente")
+}
+else if (calificacion >= 7){
+      alert ("B, Bueno")
+}
+else if (calificacion >= 5){
+    alert ("C, Suficiente")
+}
+else {
+    alert ("F, Insuficiente")
+}
+
+//  Ejercicio 10 : Termómetro de actividades
+
+let temperatura = parseFloat(prompt("Ingrese la temperatura actual:"));
+
+if (temperatura <30){
+    alert ("Hace mucho calor, ¡Es un buen día para ir a la alberca")
+}
+else if (temperatura >= 15 && temperatura =< 30){
+    alert ("El clima está agradable, ideal para caminar en el parque")
+}
+else {
+    alert ("Hace frío, es mejor quedarse en casa viendo una película")
+}
+
+// Ejercicio 11 : Inicio de sesión con doble activación
+
+let nombreUsuario = (prompt("Ingrese su nombre de usuario:")) 
+
+if (nombreUsuario === "admin"){
+    let password = (prompt ("Ingrese su contraseña:"))
+        if (password === "secreto123") {
+            alert ("Bienvenido Administrador")
+        }
+    }
+else {
+    alert ("Usuario no registrado")
+}
+
+// Ejercicio 12 : El juego del número secreto
+
+let numeroSecreto = 7
+
+let numeroIngresado = parseInt(prompt("Adivine e ingrese un número entre 1 y 10:"))
+
+if (numeroIngresado === numeroSecreto){
+    alert ("¡Felicidades! Has adivinado el número secreto")
+}
+
+else if (numeroIngresado > numeroSecreto){
+    alert ("Pista, el número secreto es menor")
+}
+else if (numeroIngresado < numeroSecreto){
+     alert ("Pista, el número secreto es mayor")
+}
+else {
+    alert ("Error, ingrese un número válido")
+}
+   
+// Ejercicio 13 : Clasificador de triángulos
+
+let ladoA = parseFloat(prompt("Ingrese la longitud del primer lado:"));
+let ladoB = parseFloat(prompt("Ingrese la longitud del segundo lado:"));
+let ladoC = parseFloat(prompt("Ingrese la longitud del tercer lado:"));
+
+if (ladoA === ladoB && ladoB === ladoC){
+    alert ("Es un triángulo Equilátero")
+}
+else if (ladoA !== ladoB && ladoB !== ladoC && ladoA !== ladoC){
+    alert ("Es un triángulo Escaleno")
+}
+else {
+    alert ("Es un triángulo Isóseles")
+}
+
+// Ejercicio 14 : Simulador de cajero
+
+let saldo = 500
+
+let retiro = parseFloat(prompt("Ingrese el monto a retirar:"))
+
+if (retiro > saldo){
+    alert ("Fondos insuficientes.No puedes retirar esta cantidad")
+}
+
+if (retiro <= saldo){
+    alert (`Retiro excitoso. Tu saldo nuevo es de $(saldo - retiro)`)
+}
+
+// Ejercicio 15 : Filtro de Becas Universitarias
+
+let promedio = parseFloat(prompt("Ingrese su promedio académico:"))
+let ingresosMensuales = parseFloat(prompt("Ingrese sus ingresos mensuales (en USD):"))
+
+if (promedio >= 9) {
+    alert ("¡Beca aprobada por excelencia académica")
+}
+else if (promedio >= 7 && promedio <= 8.9 && ingresosMensuales <= 500){
+    alert ("Beca aprobada por situación socioeconómica")
+}
+    
+else {
+    alert ("Solicitud de beca rechazada")
+}
